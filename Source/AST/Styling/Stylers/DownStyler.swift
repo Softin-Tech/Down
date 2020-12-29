@@ -211,8 +211,11 @@ open class DownStyler: Styler {
 
     private func styleGenericLink(in str: NSMutableAttributedString, url: String) {
         str.addAttributes([
-            .link: url,
-            .foregroundColor: colors.link])
+            // .link: url,
+            .foregroundColor: colors.link,
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
+            .underlineColor: colors.link
+        ])
     }
 
     // MARK: - Helpers
