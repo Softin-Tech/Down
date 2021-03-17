@@ -31,6 +31,7 @@ public protocol ColorCollection {
     var body: DownColor { get }
     var code: DownColor { get }
     var link: DownColor { get }
+    var underLink: DownColor { get }
     var quote: DownColor { get }
     var quoteStripe: DownColor { get }
     var thematicBreak: DownColor { get }
@@ -39,7 +40,6 @@ public protocol ColorCollection {
 }
 
 public struct StaticColorCollection: ColorCollection {
-
     public var heading1: DownColor
     public var heading2: DownColor
     public var heading3: DownColor
@@ -49,6 +49,7 @@ public struct StaticColorCollection: ColorCollection {
     public var body: DownColor
     public var code: DownColor
     public var link: DownColor
+    public var underLink: DownColor
     public var quote: DownColor
     public var quoteStripe: DownColor
     public var thematicBreak: DownColor
@@ -65,6 +66,7 @@ public struct StaticColorCollection: ColorCollection {
         body: DownColor = .black,
         code: DownColor = .black,
         link: DownColor = .blue,
+        underLink: DownColor = .blue,
         quote: DownColor = .darkGray,
         quoteStripe: DownColor = .darkGray,
         thematicBreak: DownColor = .init(white: 0.9, alpha: 1),
@@ -80,6 +82,7 @@ public struct StaticColorCollection: ColorCollection {
         self.body = body
         self.code = code
         self.link = link
+        self.underLink = underLink
         self.quote = quote
         self.quoteStripe = quoteStripe
         self.thematicBreak = thematicBreak

@@ -214,7 +214,7 @@ open class DownStyler: Styler {
             // .link: url,
             .foregroundColor: colors.link,
             .underlineStyle: NSUnderlineStyle.single.rawValue,
-            .underlineColor: colors.link
+            .underlineColor: colors.underLink
         ])
     }
 
